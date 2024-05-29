@@ -22,3 +22,9 @@ SELECT * FROM exams WHERE date = '2020-06-20' AND TIME(hour) > '14:00:00';
 
 -- 6. Selezionare tutti i corsi di laurea magistrale
 SELECT * FROM degree WHERE level = 'magistrale';
+
+-- 7. Da quanti dipartimenti è composta l'università?
+SELECT COUNT(*) AS number_of_departments FROM departments;
+
+-- 8. Quanti sono gli insegnanti che non hanno un numero di telefono?
+SELECT COUNT(*) AS number_of_teachers_without_phone FROM teachers WHERE phone IS NULL;
