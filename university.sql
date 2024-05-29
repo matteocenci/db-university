@@ -28,3 +28,12 @@ SELECT COUNT(*) AS number_of_departments FROM departments;
 
 -- 8. Quanti sono gli insegnanti che non hanno un numero di telefono?
 SELECT COUNT(*) AS number_of_teachers_without_phone FROM teachers WHERE phone IS NULL;
+
+-- 9. Inserire nella tabella degli studenti un nuovo record con i propri dati
+
+-- RISULTATO FALLITO
+INSERT INTO students (degree_id, name, surname, date_of_birth, fiscal_code, enrolment_date, registration_number, email)
+VALUES (89, 'Matteo', 'Cenci', '2001-03-13', 'CNCMTT01C13D451W', '2022-11-11', 620058, 'matticnc@gmail.com' );
+
+-- 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+UPDATE teachers SET office_address = 126 WHERE name = 'Pietro' AND surname = 'Rizzo';
