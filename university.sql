@@ -81,3 +81,9 @@ SELECT s.*
 FROM students s
 JOIN degrees dp ON s.degree_id = dp.department_id
 WHERE dp.name = 'Corso di Laurea in Economia';
+
+-- 2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
+SELECT dp.*
+FROM degrees dp
+JOIN departments d ON dp.department_id = d.id
+WHERE dp.level = 'magistrale' AND d.name = 'Dipartimento di Neuroscienze';
