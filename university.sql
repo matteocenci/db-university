@@ -37,3 +37,24 @@ VALUES (89, 'Matteo', 'Cenci', '2001-03-13', 'CNCMTT01C13D451W', '2022-11-11', 6
 
 -- 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 UPDATE teachers SET office_address = 126 WHERE name = 'Pietro' AND surname = 'Rizzo';
+
+
+
+
+
+
+
+
+
+
+
+
+-- QUERY CHE UTILIZZANO GROUP BY 
+-- 1. Contare quanti iscritti ci sono stati ogni anno
+SELECT YEAR(enrolment_date) AS enrolment_year, COUNT(*) AS number_of_students
+FROM students
+GROUP BY YEAR(enrolment_date);
+
+-- 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+
